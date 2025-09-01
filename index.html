@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimientos de Tierra y Retroexcavación | Tu Empresa</title>
+    <title>Kedikian</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/favicon.ico">
+    
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,9 +21,9 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <div class="logo-circle">
-                        <i class="fas fa-cogs"></i>
+                        <img src="./assets/favicon.ico" alt="Kedikian Logo" class="logo-favicon">
                     </div>
-                    <span class="logo-text">EMPRESA</span>
+                    <span class="logo-text">KEDIKIAN</span>
                 </div>
                 
                 <ul class="nav-menu">
@@ -30,20 +37,21 @@
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-content">
-                                <h4>Global Earthmoving</h4>
+                                <h4></h4>
                                 <div class="services-grid">
                                     <div class="service-card mineria">
                                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop" alt="Minería">
                                         <div class="service-info">
-                                            <h5>Minería</h5>
-                                            <p>Los mejores profesionales de la minería con un historial de excelencia.</p>
+                                            <h5>Movimiento De Suelos</h5>
+                                            <p>Los mejores profesionales de movimiento de suelo de todo cordoba</p>
                                         </div>
                                     </div>
                                     <div class="service-card construccion">
                                         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop" alt="Construcción">
                                         <div class="service-info">
-                                            <h5>Construcción</h5>
-                                            <p>Tenemos experiencia en obras civiles de minería, construcción e infraestructuras.</p>
+                                            <h5>Entrega de Aridos</h5>
+                                            <p>Tenemos experiencia en obras civiles, construcción e infraestructuras.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="service-card perforacion">
@@ -76,8 +84,42 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Español <i class="fas fa-chevron-down"></i></a>
+                    <li class="nav-item dropdown-login">
+                        <a href="#" class="nav-link dropdown-trigger">
+                            Iniciar Sesión
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="login-dropdown-menu">
+                            <div class="login-dropdown-content">
+                                <h4>Acceso al Sistema</h4>
+                                <div class="login-grid">
+                                    <!-- Panel Administrador -->
+                                    <a href="http://168.197.50.82/login">
+                                        <div class="login-card administrador" onclick="goToLogin('administrador')">
+                                            <div class="login-img-wrapper">
+                                                <i class="fas fa-user-shield login-icon"></i>
+                                            </div>
+                                            <div class="login-info">
+                                                <h5>Panel Administrador</h5>
+                                                <p>Acceso completo al sistema de gestión, reportes y configuración de la empresa.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                    
+                                    <!-- Panel Operario -->
+                                    <div class="login-card operario" onclick="goToLogin('operario')">
+                                        <div class="login-img-wrapper">
+                                            <i class="fas fa-hard-hat login-icon"></i>
+                                        </div>
+                                        <div class="login-info">
+                                            <h5>Panel Operario</h5>
+                                            <p>Acceso a herramientas operativas, seguimiento de tareas y reportes de campo.</p>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
 
@@ -89,12 +131,15 @@
             </div>
         </nav>
     </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <div class="hero-overlay"></div>
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="./assets/kedikianVideo.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
         </div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Moviendo la Tierra hacia un futuro mejor</h1>
@@ -109,7 +154,7 @@
         <div class="container">
             <div class="actividad-content">
                 <div class="actividad-image">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8a8b0ac8148b?w=600&h=400&fit=crop" alt="Nuestra actividad">
+                    <img src="./assets/image.png" alt="Nuestra actividad">
                 </div>
                 <div class="actividad-text">
                     <h2>Nuestra <strong>actividad</strong></h2>
@@ -172,6 +217,7 @@
             <button class="view-all-services">Ver todos nuestros servicios <i class="fas fa-arrow-right"></i></button>
         </div>
     </section>
+    
 
     <!-- Global Movement Section -->
     <section class="global-movement">
@@ -191,5 +237,6 @@
     </section>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>

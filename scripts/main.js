@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
+            header.style.background = 'rgba(44, 44, 44, 0.98)';
+            header.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.2)';
         } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            header.style.background = 'rgba(44, 44, 44, 0.95)';
+            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
         }
         
         // Hide/show header on scroll

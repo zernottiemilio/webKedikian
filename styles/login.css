@@ -1,0 +1,260 @@
+/* Login Dropdown Styles - usando clases específicas */
+:root {
+    --primary-orange: #e67e22;
+    --secondary-orange: #f39c12;
+    --dark-orange: #d35400;
+    --light-orange: #f4a261;
+    --accent-bronze: #cd7f32;
+    --text-dark: #2c2c2c;
+    --text-light: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray-medium: #6c757d;
+    --overlay-dark: rgba(0, 0, 0, 0.8);
+    --overlay-orange: rgba(230, 126, 34, 0.9);
+}
+
+.nav-item.dropdown-login {
+    position: relative;
+    z-index: 10000;
+}
+
+.nav-item.dropdown-login .nav-link i {
+    transition: transform 0.3s ease;
+    margin-left: 5px;
+}
+
+.nav-item.dropdown-login:hover .nav-link i {
+    transform: rotate(180deg);
+}
+
+/* Login Dropdown Menu - clase específica */
+.login-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    background: rgba(44, 44, 44, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-15px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    overflow: visible;
+    margin-top: 10px;
+}
+
+.login-dropdown-menu a{
+    text-decoration: none;
+}
+.nav-item.dropdown-login:hover .login-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Login Dropdown Content */
+.login-dropdown-content {
+    padding: 25px;
+}
+
+.login-dropdown-content h4 {
+    font-size: 1.2rem;
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Login Grid */
+.login-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Login Cards */
+.login-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    min-height: 140px;
+}
+
+.login-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.2);
+    border-color: var(--primary-orange);
+    background: rgba(230, 126, 34, 0.1);
+}
+
+/* Login Image Wrapper - para centrar iconos */
+.login-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Login Icon - estilos para los iconos */
+.login-icon {
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.login-card:hover .login-icon {
+    transform: scale(1.1);
+}
+
+.login-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Login Info */
+.login-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-info a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-info h5 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.login-info p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Hover Effects */
+.login-card.administrador:hover {
+    border-color: var(--primary-orange);
+}
+
+.login-card.administrador:hover .login-info h5 {
+    color: var(--primary-orange);
+}
+
+.login-card.operario:hover {
+    border-color: var(--primary-orange);
+}
+
+.login-card.operario:hover .login-info h5 {
+    color: var(--primary-orange);
+}
+
+/* Arrow indicator para login */
+.login-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(44, 44, 44, 0.98);
+    z-index: 1;
+}
+
+.login-dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid rgba(230, 126, 34, 0.2);
+    z-index: 0;
+}
+
+/* Responsive Design para login */
+@media (max-width: 768px) {
+    .login-dropdown-menu {
+        width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .login-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .login-card img {
+        height: 100px;
+    }
+    
+    .login-dropdown-content {
+        padding: 20px;
+    }
+    
+    .login-info {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-dropdown-menu {
+        width: 95vw;
+    }
+    
+    .login-info h5 {
+        font-size: 0.9rem;
+    }
+    
+    .login-info p {
+        font-size: 0.8rem;
+    }
+}
+
