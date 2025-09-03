@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/login.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <!-- Header con navegación -->
@@ -28,7 +29,7 @@
                 
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Acerca de</a>
+                        <a href="#actividad" class="nav-link">Acerca de</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-trigger">
@@ -39,50 +40,44 @@
                             <div class="dropdown-content">
                                 <h4></h4>
                                 <div class="services-grid">
-                                    <div class="service-card mineria">
-                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop" alt="Minería">
+                                    <div class="service-card mineria"><a href="#services">
+                                        <img src="./assets/MovimientoSuelo.jpeg" alt="Movimiento de Suelo y obras civiles">
                                         <div class="service-info">
-                                            <h5>Movimiento De Suelos</h5>
-                                            <p>Los mejores profesionales de movimiento de suelo de todo cordoba</p>
-                                        </div>
+                                            <h5>Movimiento de Suelo y obras civiles</h5>
+                                            <p>Excavaciones, nivelaciones, demoliciones y acondicionamiento de terrenos.</p>
+                                        </div></a>
                                     </div>
-                                    <div class="service-card construccion">
-                                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop" alt="Construcción">
+                                    <div class="service-card construccion"><a href="#services">
+                                        <img src="./assets/paisajismo.png" alt="Paisajismo">
                                         <div class="service-info">
-                                            <h5>Entrega de Aridos</h5>
-                                            <p>Tenemos experiencia en obras civiles, construcción e infraestructuras.
-                                            </p>
-                                        </div>
+                                            <h5>Paisajismo y parquización</h5>
+                                            <p>Ejecución de proyectos de infraestructura verde, incluyendo cascadas, fuentes y espacios de recreación.</p>
+                                        </div></a>
                                     </div>
-                                    <div class="service-card perforacion">
-                                        <img src="https://images.unsplash.com/photo-1581094271901-8a8b0ac8148b?w=300&h=200&fit=crop" alt="Perforación">
+                                    <div class="service-card perforacion"><a href="#services">
+                                        <img src="./assets/aridos.png" alt="Provisión de materiales">
                                         <div class="service-info">
-                                            <h5>Perforación y voladura</h5>
-                                            <p>Creación segura y eficaz de la base para operaciones profesionales de movimiento de tierras a gran escala.</p>
-                                        </div>
+                                            <h5>Provisión de materiales</h5>
+                                            <p>Aporte de material de relleno, transporte y venta de áridos.</p>
+                                        </div></a>
                                     </div>
-                                    <div class="service-card mantenimiento">
-                                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&h=200&fit=crop" alt="Mantenimiento">
+                                    <div class="service-card mantenimiento"><a href="#services">
+                                        <img src="./assets/Maquinas.jpeg" alt="Maquinaria especializada">
                                         <div class="service-info">
-                                            <h5>Mantenimiento de equipos</h5>
-                                            <p>Mantenimiento preventivo y reparación de nuestros equipos.</p>
-                                        </div>
+                                            <h5>Maquinaria especializada</h5>
+                                            <p>Bobcats, excavadoras de distintas capacidades, palas cargadoras y camiones volcadores de gran porte.</p>
+                                        </div></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Sostenibilidad</a>
+                        <a href="#proyectos" class="nav-link">Proyectos</a>
                     </li>
+                   
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Tecnología</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Empleo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contacto</a>
+                        <a href="#footer" class="nav-link">Contacto</a>
                     </li>
                     <li class="nav-item dropdown-login">
                         <a href="#" class="nav-link dropdown-trigger">
@@ -116,7 +111,7 @@
                                             <p>Acceso a herramientas operativas, seguimiento de tareas y reportes de campo.</p>
                                         </div>
                                     </div>
-                                    <
+                                </a>
                     
                                 </div>
                             </div>
@@ -144,22 +139,29 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Moviendo la Tierra hacia un futuro mejor</h1>
-                <p>Facilitamos a nuestros clientes el suministro de los materiales necesarios para que el mundo siga prosperando y para impulsar la transición hacia una energía limpia.</p>
+                <p>Más que mover suelo, nuestro objetivo es preparar el terreno para que los proyectos crezcan firmes, seguros y con visión de futuro.</p>
                 <button class="cta-button">Qué hacemos <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </section>
 
     <!-- Actividad Section -->
-    <section class="actividad">
+    <section class="actividad" id="actividad">
         <div class="container">
             <div class="actividad-content">
-                <div class="actividad-image">
-                    <img src="./assets/image.png" alt="Nuestra actividad">
+                <div class="actividad-video">
+                    <video autoplay muted loop>
+                        <source src="./assets/VideoMaquina.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
                 </div>
                 <div class="actividad-text">
                     <h2>Nuestra <strong>actividad</strong></h2>
-                    <p>El principal objetivo de nuestra empresa es prestar servicios de movimiento de tierras para proyectos de minería e infraestructuras siendo líderes de nuestro sector a la vez que mantenemos el máximo respeto posible por el medio ambiente, las personas y las comunidades a las que servimos. Nuestra estrategia se centra en construir relaciones duraderas para perfeccionar nuestra eficiencia operativa al tiempo que reforzamos nuestros compromisos ESG a largo plazo. De este modo ayudamos a suministrar los materiales vitales necesarios para un mundo más brillante, más verde y más equitativo, mantenimiento al mismo tiempo un impacto positivo sostenible para las generaciones futuras.</p>
+                    <p>Kedikian Movimiento de Suelo es una empresa con más de 18 años de experiencia en obras civiles y proyectos de construcción. Nos especializamos en excavaciones, nivelaciones, demoliciones, mejoras de terreno, provisión de material de relleno y venta de áridos, y recientemente hemos expandido nuestros servicios hacia el paisajismo y la parquización en hoteles, barrios privados y espacios recreativos, incluyendo el diseño y construcción de cascadas, fuentes y entornos verdes de alto impacto visual.
+
+                        Nuestro parque de maquinaria es amplio y versátil: contamos con Bobcats, excavadoras pequeñas y grandes, palas cargadoras, camiones volcadores de distintas capacidades, y además disponemos de martillos hidráulicos y una gran variedad de accesorios que nos permiten adaptarnos a cada tipo de trabajo y simplificar las tareas, optimizando tiempos y costos.
+                        
+                        En Kedikian, la seriedad, la confianza y la eficiencia son nuestros pilares. A lo largo de los años hemos construido relaciones sólidas con arquitectos, desarrollistas, cooperativas y empresas líderes de Córdoba, que nos eligen porque siempre cumplimos con lo que prometemos y ofrecemos soluciones concretas para cada necesidad.</p>
                     <button class="learn-more-btn">Sobre nosotros <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
@@ -167,50 +169,51 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2>Nuestros Servicios</h2>
-            <p class="services-description">Ofrecemos servicios de movimiento de tierras de primera clase para la minería y la construcción.</p>
+            <p class="services-description">Ofrecemos servicios de movimiento de suelo de primera clase, entrega de aridos, paisajismo y maquinaria profesional</p>
             <p class="services-subtitle">Aportamos valor a los clientes a través de nuestro compromiso con la excelencia, nuestro inquebrantable espíritu de cooperación y nuestro excelente personal.</p>
             
             <div class="services-grid">
                 <div class="service-item mineria">
                     <div class="service-content">
-                        <h3>Minería</h3>
-                        <p>Los mejores profesionales de la minería con un historial de excelencia.</p>
+                        <h3>Movimiento de Suelo y obras civiles</h3>
+                        <p>Excavaciones, nivelaciones, demoliciones y acondicionamiento de terrenos.
+                        </p>
                     </div>
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Minería">
+                        <img src="/assets/MovimientoSuelo.jpeg" alt="Movimiento de Suelo y obras civiles">
                     </div>
                 </div>
                 
                 <div class="service-item construccion">
                     <div class="service-content">
-                        <h3>Construcción</h3>
-                        <p>Tenemos experiencia en obras civiles de minería, construcción e infraestructuras.</p>
+                        <h3>Paisajismo y parquización</h3>
+                        <p>Ejecución de proyectos de infraestructura verde, incluyendo cascadas, fuentes y espacios de recreación.</p>
                     </div>
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop" alt="Construcción">
+                        <img src="/assets/paisajismo.jpeg" alt="Paisajismo">
                     </div>
                 </div>
                 
                 <div class="service-item perforacion">
                     <div class="service-content">
-                        <h3>Perforación y voladura</h3>
-                        <p>Creación segura y eficaz de la base para operaciones profesionales de movimiento de tierras a gran escala.</p>
+                        <h3>Provisión de materiales</h3>
+                        <p>Aporte de material de relleno, transporte y venta de áridos.</p>
                     </div>
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1581094271901-8a8b0ac8148b?w=400&h=300&fit=crop" alt="Perforación y voladura">
+                        <img src="/assets/image copy.png" alt="Provisión de materiales">
                     </div>
                 </div>
                 
                 <div class="service-item mantenimiento">
                     <div class="service-content">
-                        <h3>Mantenimiento de equipos</h3>
-                        <p>Mantenimiento preventivo y reparación de nuestros equipos.</p>
+                        <h3>Maquinaria especializada</h3>
+                        <p>Bobcats, excavadoras de distintas capacidades, palas cargadoras y camiones volcadores de gran porte, martillos hidráulicos y una amplia gama de accesorios que optimizan cada intervenció. </p>
                     </div>
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop" alt="Mantenimiento de equipos">
+                        <img src="/assets/Maquinas.jpeg" alt="Maquinaria especializada">
                     </div>
                 </div>
             </div>
@@ -220,24 +223,34 @@
     </section>
     
 
-    <!-- Global Movement Section -->
-    <section class="global-movement">
+    <!-- Proyectos -->
+    <!-- Proyectos -->
+    <section class="global-projects" id="proyectos">
         <div class="container">
-            <h2>Movimiento de <strong>tierras global</strong></h2>
-            <p>Nuestra empresa es una Compañía multinacional de movimiento de tierras con actividad en todos los continentes.</p>
-            
-            <div class="world-map">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop" alt="Mapa mundial">
-                <div class="map-overlay">
-                    <div class="location-marker" style="top: 30%; left: 20%;"></div>
-                    <div class="location-marker" style="top: 40%; left: 50%;"></div>
-                    <div class="location-marker" style="top: 60%; left: 80%;"></div>
-                </div>
-            </div>
+            <h2>Nuestros <strong>Proyectos</strong></h2>
+            <p>Nuestro enfoque combina planificación, tecnología y experiencia, garantizando seguridad, eficiencia y cumplimiento en cada proyecto.</p>
+            <!-- Mapa interactivo -->
+            <div id="projects-map" style="height: 500px; width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
         </div>
     </section>
-
+    <footer class="footer" id="footer">
+        <div class="container footer-content">
+          <p>© 2025 Kedikian. Todos los derechos reservados.</p>
+          <div class="footer-icons">
+            <a href="https://www.instagram.com/kedikian_movimientodesuelo" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:contacto@kedikian.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+543511234567"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+      </footer>
+    <div class="whatsapp-float">
+        <a href="https://wa.me/543511234567?text=Hola%20Kedikian!%20Quiero%20hacer%20una%20consulta">
+        <i class="fab fa-whatsapp"></i></a>
+    </div>
     <script src="scripts/main.js"></script>
     <script src="scripts/login.js"></script>
+    <script src="scripts/proyectos.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 </body>
 </html>
