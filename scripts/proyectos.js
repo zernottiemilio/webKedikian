@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const map = L.map('projects-map').setView([-31.4167, -64.1833], 5);
+    const map = L.map('projects-map').setView([-31.4215974212694, -64.49739821367723], 10);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
@@ -17,8 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const proyectos = [
         { nombre: "WO Carlos Paz", tipo: "obraCivil", lat: -31.420662362818266, lng:  -64.49958330323393, img: "https://api.custer.com.ar/GF/File/proyects/49/avances/woo.png" },
-        { nombre: "Obra Civil Parque Industrial", tipo: "obraCivil", lat: -32.950, lng: -60.650, img: "https://via.placeholder.com/120x80?text=Parque+Industrial" },
-        { nombre: "Provisión de materiales para obra", tipo: "obraCivil", lat: -33.000, lng: -64.000, img: "https://via.placeholder.com/120x80?text=Materiales" }
+        { nombre: "Obra Coop. San Roque", tipo: "obraCivil", lat: -31.395525, lng: -64.504944, img: "./assets/sanRoque.jpeg" },
+        { nombre: "Mon petit", tipo: "obraCivil", lat: -31.4194810717101, lng:  -64.49073114509658, img: "./assets/monPetit.jpeg" },
+        { nombre: "Ruta C45", tipo: "obraCivil", lat: -31.45613984994005, lng:  -64.42374053766612, img: "./assets/rutaC45.jpeg" },
+        { nombre: "Cereño Grupo Fonte", tipo: "obraCivil", lat: -31.38077497001291, lng: -64.25698498465428, img: "./assets/cereno.jpeg"},
+        { nombre: "Cocoguana", tipo: "obraCivil", lat:-31.44391101398981, lng: -64.43853591349071, img: "./assets/cocoguana.jpeg" }
     ];
 
     proyectos.forEach(p => {

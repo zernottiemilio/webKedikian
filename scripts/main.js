@@ -285,29 +285,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Smooth scrolling para enlaces internos
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+    // Smooth scrolling para enlaces internos
+const internalLinks = document.querySelectorAll('a[href^="#"]');
+internalLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        
+        // Ignorar si es solo "#"
+        if (!targetId || targetId === '#') {
+            return;
+        }
+
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            const headerHeight = header ? header.offsetHeight : 0;
+            const targetPosition = targetElement.offsetTop - headerHeight;
             
-            if (targetElement) {
-                const headerHeight = header ? header.offsetHeight : 0;
-                const targetPosition = targetElement.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Cerrar menú móvil si está abierto
-                if (isMobileView()) {
-                    closeMenuMobile();
-                }
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            if (isMobileView()) {
+                closeMenuMobile();
             }
-        });
+        }
     });
+});
+
     
     // Animaciones al hacer scroll
     const observerOptions = {
